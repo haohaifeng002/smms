@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.gradDesign.smms.domain.StoreRecord" table="store_record">
+    	<comment>store_record</comment>
+        <!-- single primaryKey -->
+	    <id name="stoId" type="string" length="32">
+	    	<column name="STO_ID">
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="sttNum" type="string"  length="50"  not-null="false">
+	    	<column name="STT_NUM">
+	    	</column>
+    	</property>  
+         
+	    <property name="proNum" type="string"  length="50"  not-null="false">
+	    	<column name="PRO_NUM">
+	    	</column>
+    	</property>  
+         
+	    <property name="repoId" type="string"  length="32"  not-null="false">
+	    	<column name="REPO_ID">
+	    	</column>
+    	</property>  
+         
+	    <property name="repoNum" type="string"  length="50"  not-null="false">
+	    	<column name="REPO_NUM">
+	    	</column>
+    	</property>  
+         
+	    <property name="repoName" type="string"  length="100"  not-null="false">
+	    	<column name="REPO_NAME">
+	    	</column>
+    	</property>  
+         
+	    <property name="count" type="integer"  not-null="false">
+	    	<column name="COUNT">
+	    	</column>
+    	</property>  
+         
+	    <property name="unitPrice" type="double"  not-null="false">
+	    	<column name="UNIT_PRICE">
+	    	</column>
+    	</property>  
+         
+	    <property name="amount" type="double"  not-null="false">
+	    	<column name="AMOUNT">
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

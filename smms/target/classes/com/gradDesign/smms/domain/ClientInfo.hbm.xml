@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.gradDesign.smms.domain.ClientInfo" table="client_info">
+    	<comment>client_info</comment>
+        <!-- single primaryKey -->
+	    <id name="cltId" type="string" length="32">
+	    	<column name="CLT_ID">
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="cltNum" type="string"  length="50"  not-null="false">
+	    	<column name="CLT_NUM">
+	    	</column>
+    	</property>  
+         
+	    <property name="cltName" type="string"  length="100"  not-null="false">
+	    	<column name="CLT_NAME">
+	    	</column>
+    	</property>  
+         
+	    <property name="cltPost" type="string"  length="6"  not-null="false">
+	    	<column name="CLT_POST">
+	    	</column>
+    	</property>  
+         
+	    <property name="cltAddr" type="string"  length="200"  not-null="false">
+	    	<column name="CLT_ADDR">
+	    	</column>
+    	</property>  
+         
+	    <property name="linkman" type="string"  length="100"  not-null="false">
+	    	<column name="LINKMAN">
+	    	</column>
+    	</property>  
+         
+	    <property name="phone" type="string"  length="32"  not-null="false">
+	    	<column name="PHONE">
+	    	</column>
+    	</property>  
+         
+	    <property name="remark" type="string"  length="500"  not-null="false">
+	    	<column name="REMARK">
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

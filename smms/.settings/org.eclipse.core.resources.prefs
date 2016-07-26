@@ -1,0 +1,17 @@
+eclipse.preferences.version=1
+encoding//src/main/java=UTF-8
+encoding//src/main/resources=UTF-8
+encoding//src/main/resources/com/gradDesign/smms/domain/ClientInfo.hbm.xml=UTF-8
+encoding//src/main/resources/com/gradDesign/smms/domain/EmpInfo.hbm.xml=UTF-8
+encoding//src/main/resources/com/gradDesign/smms/domain/ProInfo.hbm.xml=UTF-8
+encoding//src/main/resources/com/gradDesign/smms/domain/Repository.hbm.xml=UTF-8
+encoding//src/main/resources/com/gradDesign/smms/domain/SaleInfo.hbm.xml=UTF-8
+encoding//src/main/resources/com/gradDesign/smms/domain/SaleTicket.hbm.xml=UTF-8
+encoding//src/main/resources/com/gradDesign/smms/domain/Stock.hbm.xml=UTF-8
+encoding//src/main/resources/com/gradDesign/smms/domain/StoreRecord.hbm.xml=UTF-8
+encoding//src/main/resources/com/gradDesign/smms/domain/StoreTicket.hbm.xml=UTF-8
+encoding//src/main/resources/com/gradDesign/smms/domain/SuppInfo.hbm.xml=UTF-8
+encoding//src/main/resources/com/gradDesign/smms/domain/UserLogin.hbm.xml=UTF-8
+encoding//src/test/java=UTF-8
+encoding//src/test/resources=UTF-8
+encoding/<project>=UTF-8

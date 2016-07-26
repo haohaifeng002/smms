@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.gradDesign.smms.domain.UserLogin" table="user_login">
+    	<comment>user_login</comment>
+        <!-- single primaryKey -->
+	    <id name="loginId" type="string" length="32">
+	    	<column name="LOGIN_ID">
+    	        <comment>login_id</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="empId" type="string"  length="32"  not-null="false">
+	    	<column name="EMP_ID">
+    	        <comment>人员ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="password" type="string"  length="50"  not-null="false">
+	    	<column name="PASSWORD">
+    	        <comment>登录密码</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

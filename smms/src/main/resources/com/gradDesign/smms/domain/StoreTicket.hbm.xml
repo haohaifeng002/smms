@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.gradDesign.smms.domain.StoreTicket" table="store_ticket">
+    	<comment>store_ticket</comment>
+        <!-- single primaryKey -->
+	    <id name="sttId" type="string" length="32">
+	    	<column name="STT_ID">
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="sttNum" type="string"  length="50"  not-null="false">
+	    	<column name="STT_NUM">
+	    	</column>
+    	</property>  
+         
+	    <property name="supNum" type="string"  length="50"  not-null="false">
+	    	<column name="SUP_NUM">
+	    	</column>
+    	</property>  
+         
+	    <property name="varietyCount" type="integer"  not-null="false">
+	    	<column name="VARIETY_COUNT">
+	    	</column>
+    	</property>  
+         
+	    <property name="spay" type="double"  not-null="false">
+	    	<column name="S_PAY">
+	    	</column>
+    	</property>  
+         
+	    <property name="tpay" type="double"  not-null="false">
+	    	<column name="T_PAY">
+	    	</column>
+    	</property>  
+         
+	    <property name="npay" type="double"  not-null="false">
+	    	<column name="N_PAY">
+	    	</column>
+    	</property>  
+         
+	    <property name="isPay" type="character"  not-null="false">
+	    	<column name="IS_PAY">
+	    	</column>
+    	</property>  
+         
+	    <property name="dataTime" type="date"  not-null="false">
+	    	<column name="DATA_TIME">
+	    	</column>
+    	</property>  
+         
+	    <property name="operator" type="string"  length="50"  not-null="false">
+	    	<column name="OPERATOR">
+	    	</column>
+    	</property>  
+         
+	    <property name="handlerName" type="string"  length="50"  not-null="false">
+	    	<column name="HANDLER_NAME">
+	    	</column>
+    	</property>  
+         
+	    <property name="payWay" type="string"  length="50"  not-null="false">
+	    	<column name="PAY_WAY">
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

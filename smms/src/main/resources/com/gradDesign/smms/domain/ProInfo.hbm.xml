@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.gradDesign.smms.domain.ProInfo" table="pro_info">
+    	<comment>pro_info</comment>
+        <!-- single primaryKey -->
+	    <id name="proId" type="string" length="32">
+	    	<column name="PRO_ID">
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="proNum" type="string"  length="50"  not-null="false">
+	    	<column name="PRO_NUM">
+	    	</column>
+    	</property>  
+         
+	    <property name="proName" type="string"  length="100"  not-null="false">
+	    	<column name="PRO_NAME">
+	    	</column>
+    	</property>  
+         
+	    <property name="proArea" type="string"  length="200"  not-null="false">
+	    	<column name="PRO_AREA">
+	    	</column>
+    	</property>  
+         
+	    <property name="proStandard" type="string"  length="32"  not-null="false">
+	    	<column name="PRO_STANDARD">
+	    	</column>
+    	</property>  
+         
+	    <property name="proUnit" type="string"  length="32"  not-null="false">
+	    	<column name="PRO_UNIT">
+	    	</column>
+    	</property>  
+         
+	    <property name="proBrand" type="string"  length="200"  not-null="false">
+	    	<column name="PRO_BRAND">
+	    	</column>
+    	</property>  
+         
+	    <property name="purchasingPrice" type="double"  not-null="false">
+	    	<column name="PURCHASING_PRICE">
+	    	</column>
+    	</property>  
+         
+	    <property name="tradePrice" type="double"  not-null="false">
+	    	<column name="TRADE_PRICE">
+	    	</column>
+    	</property>  
+         
+	    <property name="retailPrice" type="double"  not-null="false">
+	    	<column name="RETAIL_PRICE">
+	    	</column>
+    	</property>  
+         
+	    <property name="expirationDate" type="string"  length="32"  not-null="false">
+	    	<column name="EXPIRATION_DATE">
+	    	</column>
+    	</property>  
+         
+	    <property name="supplier" type="string"  length="200"  not-null="false">
+	    	<column name="SUPPLIER">
+	    	</column>
+    	</property>  
+         
+	    <property name="remarks" type="string"  length="500"  not-null="false">
+	    	<column name="REMARKS">
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

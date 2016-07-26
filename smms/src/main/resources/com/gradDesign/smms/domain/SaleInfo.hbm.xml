@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.gradDesign.smms.domain.SaleInfo" table="sale_info">
+    	<comment>sale_info</comment>
+        <!-- single primaryKey -->
+	    <id name="saleId" type="string" length="32">
+	    	<column name="SALE_ID">
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="ticketNum" type="string"  length="50"  not-null="false">
+	    	<column name="TICKET_NUM">
+	    	</column>
+    	</property>  
+         
+	    <property name="proNum" type="string"  length="50"  not-null="false">
+	    	<column name="PRO_NUM">
+	    	</column>
+    	</property>  
+         
+	    <property name="proId" type="string"  length="32"  not-null="false">
+	    	<column name="PRO_ID">
+	    	</column>
+    	</property>  
+         
+	    <property name="proName" type="string"  length="100"  not-null="false">
+	    	<column name="PRO_NAME">
+	    	</column>
+    	</property>  
+         
+	    <property name="repoId" type="string"  length="32"  not-null="false">
+	    	<column name="REPO_ID">
+	    	</column>
+    	</property>  
+         
+	    <property name="repoNum" type="string"  length="50"  not-null="false">
+	    	<column name="REPO_NUM">
+	    	</column>
+    	</property>  
+         
+	    <property name="repoName" type="string"  length="100"  not-null="false">
+	    	<column name="REPO_NAME">
+	    	</column>
+    	</property>  
+         
+	    <property name="saleCount" type="integer"  not-null="false">
+	    	<column name="SALE_COUNT">
+	    	</column>
+    	</property>  
+         
+	    <property name="saleUnitPrice" type="double"  not-null="false">
+	    	<column name="SALE_UNIT_PRICE">
+	    	</column>
+    	</property>  
+         
+	    <property name="amount" type="double"  not-null="false">
+	    	<column name="AMOUNT">
+	    	</column>
+    	</property>  
+         
+	    <property name="grossProfit" type="double"  not-null="false">
+	    	<column name="GROSS_PROFIT">
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

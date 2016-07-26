@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.gradDesign.smms.domain.EmpInfo" table="emp_info">
+    	<comment>emp_info</comment>
+        <!-- single primaryKey -->
+	    <id name="empId" type="string" length="32">
+	    	<column name="EMP_ID">
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="empNum" type="string"  length="50"  not-null="false">
+	    	<column name="EMP_NUM">
+	    	</column>
+    	</property>  
+         
+	    <property name="empName" type="string"  length="200"  not-null="false">
+	    	<column name="EMP_NAME">
+	    	</column>
+    	</property>  
+         
+	    <property name="empGender" type="string"  length="2"  not-null="false">
+	    	<column name="EMP_GENDER">
+	    	</column>
+    	</property>  
+         
+	    <property name="empPosition" type="string"  length="50"  not-null="false">
+	    	<column name="EMP_POSITION">
+	    	</column>
+    	</property>  
+         
+	    <property name="empSalary" type="double"  not-null="false">
+	    	<column name="EMP_SALARY">
+	    	</column>
+    	</property>  
+         
+	    <property name="remarks" type="string"  length="500"  not-null="false">
+	    	<column name="REMARKS">
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

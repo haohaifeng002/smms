@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.gradDesign.smms.domain.Repository" table="repository">
+    	<comment>repository</comment>
+        <!-- single primaryKey -->
+	    <id name="repoId" type="string" length="32">
+	    	<column name="REPO_ID">
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="repoName" type="string"  length="100"  not-null="false">
+	    	<column name="REPO_NAME">
+	    	</column>
+    	</property>  
+         
+	    <property name="repoNum" type="string"  length="50"  not-null="false">
+	    	<column name="REPO_NUM">
+	    	</column>
+    	</property>  
+         
+	    <property name="empId" type="string"  length="32"  not-null="false">
+	    	<column name="EMP_ID">
+	    	</column>
+    	</property>  
+         
+	    <property name="empNum" type="string"  length="50"  not-null="false">
+	    	<column name="EMP_NUM">
+	    	</column>
+    	</property>  
+         
+	    <property name="empName" type="string"  length="100"  not-null="false">
+	    	<column name="EMP_NAME">
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>
