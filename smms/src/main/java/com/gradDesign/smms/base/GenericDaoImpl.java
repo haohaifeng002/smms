@@ -10,6 +10,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Projections;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,6 +21,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class GenericDaoImpl<T> extends HibernateDaoSupport implements GenericDao<T> {
 
+	public final static Logger LOG = LoggerFactory.getLogger(GenericDaoImpl.class);
 	@Autowired
 	private SessionFactory sessionFactory;
 	private Class<T> entityClass;
@@ -35,7 +38,7 @@ public class GenericDaoImpl<T> extends HibernateDaoSupport implements GenericDao
 		ParameterizedType pt = (ParameterizedType) getClass()
 				.getGenericSuperclass();
 		entityClass = (Class<T>) pt.getActualTypeArguments()[0];
-		System.out.println("---------------"+entityClass+"-------------");
+		LOG.info("------------- Great! The entityClass is {}--------------",entityClass);
 	}
 
 	/**

@@ -2,8 +2,17 @@ package com.gradDesign.smms.domain;
 //导入 java 类
 import java.io.Serializable;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+import org.hibernate.annotations.GenericGenerator;
 
 /**
  * EmpInfo的POJO类
@@ -11,6 +20,9 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
  * @author  hhf  [Thu Jul 14 08:07:02 CST 2016]
  * 
  */
+@Entity
+@Table(name="emp_info",catalog="smms")
+@Cache(usage=CacheConcurrencyStrategy.READ_WRITE)
 public class EmpInfo implements Serializable{
 
     /**
@@ -21,6 +33,10 @@ public class EmpInfo implements Serializable{
 	/** 
      * 属性empId
      */
+	@Id
+	@Column(unique=true, nullable=false,length=32)
+	@GenericGenerator(name="empId_",strategy="uuid")
+	@GeneratedValue(generator="empId_")
     private String empId;
 	
     /** 
@@ -52,30 +68,40 @@ public class EmpInfo implements Serializable{
      * 属性remarks
      */
     private String remarks;
+    
+    
+    private String createTime;
 	
     /**
      * EmpInfo构造函数
      */
     public EmpInfo() {
-        super();
     }  
 	
     /**
      * EmpInfo完整的构造函数
      */  
-    public EmpInfo(String empId){
-        this.empId = empId;
-    }
- 
-    /**
+    public EmpInfo(String empNum, String empName,
+			String empGender, String empPosition, Double empSalary,
+			String remarks, String createTime) {
+		this.empNum = empNum;
+		this.empName = empName;
+		this.empGender = empGender;
+		this.empPosition = empPosition;
+		this.empSalary = empSalary;
+		this.remarks = remarks;
+		this.createTime = createTime;
+	}
+
+	/**
      * 属性 empId 的get方法
      * @return String
      */
     public String getEmpId(){
         return empId;
     }
-	
-    /**
+
+	/**
      * 属性 empId 的set方法
      * @return
      */
@@ -181,9 +207,17 @@ public class EmpInfo implements Serializable{
      */
     public void setRemarks(String remarks){
         this.remarks = remarks;
-    } 
-	
-    /**
+    }
+    
+    public String getCreateTime() {
+		return createTime;
+	}
+
+	public void setCreateTime(String createTime) {
+		this.createTime = createTime;
+	}
+
+	/**
      * Hibernate通过该方法判断对象是否相等
      * @return boolean
      */  
@@ -216,6 +250,7 @@ public class EmpInfo implements Serializable{
             .append("empPosition",getEmpPosition())
             .append("empSalary",getEmpSalary())
             .append("remarks",getRemarks())
+            .append("createTime",getCreateTime())
             .toString();    
     } 
    

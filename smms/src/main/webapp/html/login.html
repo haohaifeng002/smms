@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src="../js/easyui/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(window).resize(function(){
+        	//设置登录图片div在浏览器中垂直水平居中显示
+            $('#d1').css({ 
+                position:'relative', 
+                left: ($(window).width() - $('#d1').outerWidth())/2, 
+                top: ($(window).height() - $('#d1').outerHeight())/2 + $(document).scrollTop()
+            }); 
+			//设置表单表格在图片div中垂直居中
+            $('#d2').css({
+                position:'absolute',
+                top: ($("#d1").height() - $('#d2').outerHeight())/2 + $(document).scrollTop()
+            }); 
+
+        }); 
+        //初始化函数 
+        $(function(){
+            $(window).resize(); 
+        });  
+    </script>   
+</head>
+
+<style type="text/css">
+    *{font-size:12px;}
+    #d1 {width:652px; height:539px;background:url(../images/login3.jpg) no-repeat;background-size:cover;}
+    #d2{ width:280px;height:120px;margin:10px 0 0 80px; padding: 10px}
+    .inputStyle{border:0;background: #B4D7F3;width: 200px;height:22px;margin:3px 0; padding:0 5px;}
+    .laberStyle{color:#fff;font-weight:bold}
+</style>
+
+<body style="background:#D7E8F6">
+<div id="d1">
+    <div id="d2">
+        <table>
+            <tr>
+                <td><span class="laberStyle">账号:</span></td>
+                <td><input type="text" id="" name="" class="inputStyle"/></td>
+            </tr>
+            <tr>
+                <td><span class="laberStyle">密码:</span></td>
+                <td><input type="password" id="" name="" class="inputStyle"/></td>
+            </tr>
+            <tr>
+                <td><span class="laberStyle">验证码:</span></td>
+                <td><input type="text" id="" name="" style="width:50%" class="inputStyle"/>　<span class="laberStyle">ddd</span></td>
+            </tr>
+            <tr>
+                <td>　</td>
+                <td><input type="submit" value="登录" class="laberStyle" style="border:0;width:80px;height:24px;background:#A4D0F5;cursor:pointer;"/></td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>

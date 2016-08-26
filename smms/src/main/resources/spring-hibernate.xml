@@ -48,7 +48,7 @@
 				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
 				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
 				<prop key="hibernate.format_sql">${hibernate.format_sql}</prop>
-				<!-- <prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop> -->
+				<prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
 
 				<!-- 开启二级缓存 ehcache -->
 				<prop key="hibernate.cache.use_second_level_cache">${hibernate.cache.use_second_level_cache}</prop>
@@ -59,15 +59,16 @@
 			</props>
 		</property>
 		
-		<!--自动扫描bean文件，此处用于符合jpa注解的bean	
+		<!--自动扫描bean文件，此处用于符合jpa注解的bean	-->
 		<property name="packagesToScan">
                 <value>com.gradDesign.smms.domain</value>
         </property>
-        -->
-        <!--自动扫描bean文件夹同目录的*.hbm.xml，为什么单元测试报错不起作用,调试了2天终于找到为什么了。自动生成的domain和hbm.xml文件有编码和路径问题（禁忌）-->
+        
+        <!--自动扫描bean文件夹同目录的*.hbm.xml，为什么单元测试报错不起作用,调试了2天终于找到为什么了。自动生成的domain和hbm.xml文件有编码和路径问题（禁忌）
 	    <property name="mappingDirectoryLocations">
             <value>classpath:com/gradDesign/smms/domain</value>
         </property>
+        -->
         
         <!--自动扫描bean文件夹同目录的*.hbm.xml
 		<property name="mappingResources">   

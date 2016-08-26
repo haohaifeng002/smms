@@ -3,11 +3,12 @@ package com.gradDesign.smms.service.base;
 import java.util.List;
 
 import com.gradDesign.smms.base.GenericDao;
+import com.gradDesign.smms.base.GenericDaoImpl;
 import com.gradDesign.smms.page.PageRequestBean;
 import com.gradDesign.smms.page.PageResponseBean;
 
 
-public abstract class BaseService{
+public abstract class BaseService<T> extends GenericDaoImpl<T>{
 	// 公共分页查询方法
 		public <T> PageResponseBean pageQuery(PageRequestBean pageRequestBean,
 				GenericDao<T> dao) {

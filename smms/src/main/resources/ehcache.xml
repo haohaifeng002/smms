@@ -23,7 +23,4 @@
 		 diskPersistent="false"
 		 overflowToDisk="false" 
 		 maxElementsOnDisk="1000000" /> 
-
-
-
 </ehcache>
